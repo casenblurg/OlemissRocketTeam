@@ -56,7 +56,10 @@ This repository contains Python code for analyzing the static fire test data of 
 
 ## ⚙️ How to Run
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/srm-analysis.git
-   cd srm-analysis
+
+   ## 📦 Dependencies
+
+Make sure to install the correct Python dependencies:
+
+```bash
+pip install numpy pandas matplotlib scipy
