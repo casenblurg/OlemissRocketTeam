@@ -54,7 +54,7 @@ This repository contains Python code for analyzing the static fire test data of 
 
 ---
 
-## ⚙️ How to Run
+
 
 
    ## 📦 Dependencies
