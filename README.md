@@ -1,4 +1,4 @@
-# 🚀 Solid Rocket Motor Test Stand – DAQ System Overview - Casey Heustess
+# 🚀 SRM Test Stand – Overview - Casey Heustess
 
 Over the course of a year and a half (**Nov 2023 – April 2025**), I designed and built a data acquisition (DAQ) system for a **solid rocket motor (SRM) test stand**. This system was developed to accurately record **thrust** and **chamber pressure** data during static fire tests of **AeroTech reloadable SRMs**.
 
