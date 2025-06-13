@@ -45,7 +45,7 @@ The DAQ setup interfaces with both a **load cell** and a **pressure transducer**
 
 ## 📘 Additional Information
 
-The data analyzed in this repository comes from the **first hot fire test** ever recorded using this system and is used here for demonstration purposes. The goal of this repository is to showcase what can be done with acquired SRM test data — not to claim perfection. There are always better methods to explore, and continuous improvement is part of the process.
+The data analyzed in this repository comes from the **first hot fire test** ever recorded using this system and is used here for demonstration purposes. The goal of this repository is to showcase what can be done with acquired SRM test data. There are always better methods to explore, and continuous improvement is part of the process.
 
 This project serves as a hands-on opportunity for me to strengthen my skills across **mechanical**, **electrical**, and **computer engineering**, as well as to sharpen my overall **data analysis abilities**, particularly in the context of **aerospace and rocketry**.
 
