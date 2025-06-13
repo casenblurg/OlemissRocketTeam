@@ -1,65 +1,18 @@
-# 🚀 SRM Static Fire Data Analysis
+# Overview
 
-This repository contains Python code for analyzing the static fire test data of a solid rocket motor (SRM) — specifically the **AeroTech L1420R-PS RMS-75/5120** motor used by the **Ole Miss Rocket Team**. The script processes force and pressure sensor data to extract useful performance parameters such as:
+Over the course of a year and a half (Nov 2023 - April 2025) I instrumented a solid rocket motor (SRM) test stand. This data acquisition system (DAQ)  was developed to accurately record thrust and chamber pressure data from Aerotech solid rocket motors during static fire tests. The system captures static thrust and pressure data from both a load cell and a pressure transducer, conditions the signals, and stores the data for post-processing and analysis.
 
-- Burn time
-- Mass flow rate
-- Exit velocity
-- Area ratio
-- Exit Mach number
-- Comparison against AeroTech's published data
-
----
-
-## 📁 Files
-
-- `SRM_Calculations.py` — Main Python script for processing and analyzing test data
-- `Force.csv` — Load cell data (in lbf)
-- `Pressure.csv` — Chamber pressure data (not yet utilized)
-- `README.md` — Project description and usage instructions
-
----
-
-## 📊 Output Metrics
-
-| Parameter               | Description                                                                 |
-|------------------------|-----------------------------------------------------------------------------|
-| **Burn Time**          | Based on when thrust rises above and falls below zero                      |
-| **Mass Flow Rate**     | Computed using motor mass and burn duration                                 |
-| **Exit Velocity (Ve)** | `Ve = F_avg / mdot`                                                          |
-| **Exit Mach Number**   | Estimated using area ratio and isentropic relations                         |
-| **Specific Impulse**   | `Isp = Ve / g0`, shows thrust per unit propellant per second                |
-
-> 💡 For theoretical background, refer to:
-> - [NASA: Isentropic Flow Calculator](https://www.grc.nasa.gov/www/k-12/airplane/astar.html)
-> - [Purdue: Isentropic Flow Table Generator](https://engineering.purdue.edu/~propulsi/propulsion/flow/isent12.html)
-> - [NASA: Specific Impulse Explanation](https://www.grc.nasa.gov/www/k-12/airplane/specimp.html)
-
----
-
-## 📐 AeroTech Reference Data
-
-| Property               | Value                    |
-|------------------------|--------------------------|
-| Average Thrust         | 1420 N                   |
-| Total Impulse          | 4603 Ns                  |
-| Burn Duration          | 3.2 s                    |
-| Motor Mass             | 2560 g                   |
-| Throat Diameter        | 0.485 in                 |
-| Exit Diameter          | 1.250 in                 |
-
-📄 Official Motor Spec Sheets:
-- [AeroTech Product Page](https://aerotech-rocketry.com/products/product_3872d294-577c-353f-9773-6594597dfda3?_pos=2&_sid=036e31a62&_ss=r)
-- [Throat/Nozzle Dimensions Reference](https://www.rocketmotorparts.com/75mm_Nozzle_0485__Throat/p1577809_20627885.aspx)
-
----
-
-
-
-
-   ## 📦 Dependencies
-
-Make sure to install the correct Python dependencies:
-
-```bash
-pip install numpy pandas matplotlib scipy
+## Hardware
+| Component                              | Description                                              |
+|----------------------------------------|----------------------------------------------------------|
+| **NI cDAQ-9174**                       | Chassis for data acquisition modules                    |
+| **NI 9201**                            | 12-bit Analog Input Module (used to read sensor voltages) |
+| **NI 9482**                            | Electromechanical Relay Module                          |
+| **DR-ODC5**                            | Solid-state relay (used for ignition)                   |
+| **PS-1S400EP**                         | Power Supply Unit                                       |
+| **Computer Supply Breakout Board**     | Provides regulated voltage                              |
+| **INA110**                             | Instrumentation Amplifier (for load cell signal conditioning) |
+| **LC113B-2K Omega S-type Load Cell**   | Measures thrust (lbf)                                   |
+| **PX309-3KG10V Omega Pressure Transducer** | Measures chamber pressure (psi)                     |
+| **1 µF Tantalum Capacitors**           | Used for filtering power supply noise                   |
+| **General wiring, connectors, and test stand** | Electrical and mechanical support components       |
