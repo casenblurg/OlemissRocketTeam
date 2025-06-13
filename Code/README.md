@@ -12,7 +12,7 @@ The `PlotData.py` script is used to:
 - Show raw voltage readings from both the load cell and pressure transducer
 - Apply a low-pass Butterworth filter to remove noise
 - Display filtered vs. unfiltered thrust and chamber pressure data
-
+- Relevant data is provided in this repository under: `casenblurg/OlemissRocketTeam/Data`
 
 
 
