@@ -7,4 +7,4 @@ Make a function to calculate Cstar
 
 Make a function to calculate thrust coefficient Cf
 
-[Link](https://www.nakka-rocketry.net/cstar_example1.html)
+[https://www.nakka-rocketry.net/cstar_example1.html](https://www.nakka-rocketry.net/cstar_example1.html)
