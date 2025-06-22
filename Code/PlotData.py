@@ -5,18 +5,10 @@ import functions as func
 
 
 def main():
-    Force = pd.read_csv(r'C:/CaseyRocket/Data/Force.csv')     # Read Force Data from Excel
-    F = Force.iloc[:,0].values 
-
-    ChamberPressure = pd.read_csv(r'C:/CaseyRocket/Data/Pressure.csv') # Read Pressure Data from Excel
-    Pc = ChamberPressure.iloc[:,0].values 
-
-    RawLoadCell = pd.read_csv(r'C:/CaseyRocket/Data/RawLoadCell.csv')     # Read Force Data from Excel
-    RawF = RawLoadCell.iloc[:,0].values 
-
-    RawPressureTransducer = pd.read_csv(r'C:/CaseyRocket/Data/RawPressureTransducer.csv') # Read Pressure Data from Excel
-    RawP = RawPressureTransducer.iloc[:,0].values 
-
+    
+    F, Pc, RawF, RawP = func.GetBurnData()
+    
+    
     func.DataInformation(F)  # PlotBurnData() Depends on this function call !
     func.PlotBurnData(F, Pc, RawF, RawP, 0)  
 
