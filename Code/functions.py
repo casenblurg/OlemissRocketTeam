@@ -2,6 +2,57 @@ print("functions.py is loaded")
 print(__file__)
 
 
+def GetCalibrationData():
+
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "Sensor_Calibration", "Data", "LoadCellCalibration_2KgLoad.csv"))
+    Force = pd.read_csv(data_file)     # Read Force Data from Excel
+    two_kg = Force.iloc[:,0].values 
+
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "Sensor_Calibration", "Data", "LoadCellCalibration_BodyWeight.csv"))
+    Force = pd.read_csv(data_file)     # Read Force Data from Excel
+    BodyWeight = Force.iloc[:,0].values 
+
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "Sensor_Calibration", "Data", "LoadCellCalibration_Loading_Unloading_2Kg.csv"))
+    Force = pd.read_csv(data_file)     # Read Force Data from Excel
+    LoadUnload = Force.iloc[:,0].values 
+
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "Sensor_Calibration", "Data", "LoadCellCalibration_NoLoad.csv"))
+    Force = pd.read_csv(data_file)     # Read Force Data from Excel
+    NoLoad = Force.iloc[:,0].values 
+
+    return two_kg, BodyWeight, LoadUnload, NoLoad
+
+
+def GetBurnData():
+  
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "Data", "Force.csv"))
+    Force = pd.read_csv(data_file)     # Read Force Data from Excel
+    F = Force.iloc[:,0].values 
+
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "Data", "Pressure.csv"))
+    ChamberPressure = pd.read_csv(data_file) # Read Pressure Data from Excel
+    Pc = ChamberPressure.iloc[:,0].values 
+
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "Data", "RawLoadCell.csv"))
+    RawLoadCell = pd.read_csv(data_file)     # Read Force Data from Excel
+    RawF = RawLoadCell.iloc[:,0].values 
+
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "Data", "RawPressureTransducer.csv"))
+    RawPressureTransducer = pd.read_csv(data_file) # Read Pressure Data from Excel
+    RawP = RawPressureTransducer.iloc[:,0].values 
+
+    return F, Pc, RawF, RawP
+
+
+
 def QuickPlotData(x,y,xlabel,ylable,title):
 # Quick Data plotting
     plt.plot(x,y)
@@ -100,11 +151,11 @@ def PlotBurnData(F, Pc, RawF, RawP, filtered):
 
 
 
-def LowPassFilter(Data):
+def LowPassFilter(Data, cutoff_frequency, order):
 # Low Pass Filter (Butterworth)
     #cutoff_frequency = int(input("\n Choose cutoff frequency: ")) if u want to manually input cutoff freq
-    cutoff_frequency = 7 # could be changed for your cinvienience I just fouund that 7 hz works pretty well
-    order = 4 # Order	 Result
+    #cutoff_frequency = 7 # could be changed for your cinvienience I just fouund that 7 hz works pretty well
+    #order = 4 # Order	 Result
               # 1–2	     Very smooth, may round off real signal
               # 4     	 Good balance: removes noise, keeps signal shape
               # 6	     Very sharp cutoff — good for very noisy data, may overshoot edges
@@ -133,11 +184,10 @@ def AeroTechData(): # create dictionary
     area_ratio = A_exit / A_star # area ratio calculation
 
 
-def DataInformation(Data):
+def DataInformation(Data, total_t):
     global num_samples, sampling_freq, dt, t 
 # this function takes a data file and calcs 
 # (number of samples, sampling freq, dt, and t) 
-    total_t = 15 # total time of data aquisition  # if data aquisition total time is changed this needs to be changed as well!
     
     print("\n--Imported Data Information--")
     num_samples = len(Data)  # total number of samples
@@ -157,3 +207,5 @@ def DataInformation(Data):
 import numpy as np 
 import matplotlib.pyplot as plt
 from scipy.signal import butter, filtfilt
+import pandas as pd
+import os
