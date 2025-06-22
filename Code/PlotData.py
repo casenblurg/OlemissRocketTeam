@@ -9,7 +9,7 @@ def main():
     F, Pc, RawF, RawP = func.GetBurnData()
     
     
-    func.DataInformation(F)  # PlotBurnData() Depends on this function call !
+    func.DataInformation(F, 15)  # PlotBurnData() Depends on this function call !
     func.PlotBurnData(F, Pc, RawF, RawP, 0)  
 
     Filtered_F = func.LowPassFilter(F)
