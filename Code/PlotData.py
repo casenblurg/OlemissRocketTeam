@@ -8,12 +8,16 @@ def main():
     
     F, Pc, RawF, RawP = func.GetBurnData()
     
-    
-    func.DataInformation(F, 15)  # PlotBurnData() Depends on this function call !
+    total_t = 15
+
+    func.DataInformation(F, total_t)  # PlotBurnData() Depends on this function call !
     func.PlotBurnData(F, Pc, RawF, RawP, 0)  
 
-    Filtered_F = func.LowPassFilter(F)
-    Filtered_Pc = func.LowPassFilter(Pc)
+    cutoff = 7
+    order = 4
+
+    Filtered_F = func.LowPassFilter(F, cutoff, order)
+    Filtered_Pc = func.LowPassFilter(Pc, cutoff, order)
 
     func.PlotBurnData(Filtered_F, Filtered_Pc, F, Pc, 1) # if filtered aka 1, then RawF becomes F and F becomes Filtered F, then Rawp becomes P and P becomes Filtered P
 
