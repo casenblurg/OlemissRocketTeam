@@ -6,7 +6,7 @@ import numpy as np
 
 def LoadCellCalibration():
 
-    two_kgV, BodyWeightV, LoadUnloadV, NoLoadV, _ = func.GetCalibrationData()  # Voltage
+    two_kgV, _, _, NoLoadV, _ = func.GetCalibrationData()  # Voltage
     _, _, _, t = func.DataInformation(two_kgV, 30)
 
     time_to_index = 30000 / 30   # 30000 samples / per 30 seconds
