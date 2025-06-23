@@ -45,31 +45,22 @@ baselineV = np.average(vBase)
 onehundredpsiV = np.average(v100PSI)
 #################
 
-
-#plt.plot(t, PressureV, label=f"Raw Pressure Reading")
-plt.plot(t, PressureVFil, label=f"Filtered Pressure Reading", color='black')
-plt.plot(tBase, vBase, label=f"Steady State 0 PSI: {baselineV:.4g} V", color='blue')
-plt.plot(t100PSI, v100PSI, label=f"Steady State 100 PSI: {onehundredpsiV:.4g} V", color='red')
-plt.title("Pressure Transducer calibration Data")
-plt.legend()
-plt.grid()
-plt.show()
-
 pressure_UP = 100
 pressure_DOWN = 0
-
-
-
 
 m = (pressure_UP - pressure_DOWN) / (onehundredpsiV - baselineV)    #  pressure (PSIG) / volt
 b = -m * baselineV
 
 print(f"New calibration?: PSIG = ({m:.5g} * V) + {b:0.5g}")
 
-
-#P = RawP * 300 - 0.02
-#plt.plot(time, P)
-#plt.grid()
-#plt.show()
+#        Previous Calibration was PSIG = 0.02 V - (300 PSIG/V) * V !!!!!!!!!!!!!!! should be this accoring to data sheet 
 
 
+#plt.plot(t, PressureV, label=f"Raw Pressure Reading")
+plt.plot(t, PressureVFil, label=f"Filtered Pressure Reading", color='black')
+plt.plot(tBase, vBase, label=f"Steady State 0 PSI: {baselineV:.4g} V", color='blue')
+plt.plot(t100PSI, v100PSI, label=f"Steady State 100 PSI: {onehundredpsiV:.4g} V", color='red')
+plt.title(f"Based on calibration data after burn: PSIG = ({m:.5g} * V) + {b:0.5g}")
+plt.legend()
+plt.grid()
+plt.show()
