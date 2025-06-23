@@ -7,6 +7,7 @@ import numpy as np
 
 _, _, _, _, PressureV  = func.GetCalibrationData()  # Voltage
 _, _, _, t = func.DataInformation(PressureV, 30)
+time = t
 
 time_to_index = 30000 / 30   # 30000 samples / per 30 seconds
 
@@ -14,7 +15,12 @@ cutoff = 5
 order = 4
 PressureVFil = func.LowPassFilter(PressureV, cutoff, order )
 
-# visually calculated steady state intervals
+
+RawP = PressureVFil
+
+
+
+#visually calculated steady state intervals
 start = int(0 * time_to_index) 
 end = int(17 * time_to_index)
 PressureVFil = PressureVFil[start:end]
@@ -37,8 +43,7 @@ t100PSI = t[start:end]
 
 baselineV = np.average(vBase)
 onehundredpsiV = np.average(v100PSI)
-######
-
+#################
 
 
 #plt.plot(t, PressureV, label=f"Raw Pressure Reading")
@@ -53,5 +58,18 @@ plt.show()
 pressure_UP = 100
 pressure_DOWN = 0
 
+
+
+
 m = (pressure_UP - pressure_DOWN) / (onehundredpsiV - baselineV)    #  pressure (PSIG) / volt
 b = -m * baselineV
+
+print(f"New calibration?: PSIG = ({m:.5g} * V) + {b:0.5g}")
+
+
+#P = RawP * 300 - 0.02
+#plt.plot(time, P)
+#plt.grid()
+#plt.show()
+
+
