@@ -2,50 +2,66 @@ print("functions.py is loaded")
 print(__file__)
 
 
+def voltsToLbs(DataInVolts):
+    
+    m, b = LCC.LoadCellCalibration()
+    DataInVolts = np.array(DataInVolts)  # Ensure it's a NumPy array
+    force = DataInVolts * m + b
+    return force
+
+
 def GetCalibrationData():
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    data_file = os.path.normpath(os.path.join(script_dir, "..", "Sensor_Calibration", "Data", "LoadCellCalibration_2KgLoad.csv"))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "SensorCalibrationData", "6-23-25", "LoadCellCalibration_2KgLoad_623.csv"))
     Force = pd.read_csv(data_file)     # Read Force Data from Excel
     two_kg = Force.iloc[:,0].values 
+    
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "SensorCalibrationData", "6-23-25", "PressureTransducerCalibration_0to100PSI.csv"))
+    Pressure = pd.read_csv(data_file)     # Read Force Data from Excel
+    PressureCal = Pressure.iloc[:,0].values 
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    data_file = os.path.normpath(os.path.join(script_dir, "..", "Sensor_Calibration", "Data", "LoadCellCalibration_BodyWeight.csv"))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "SensorCalibrationData",  "6-22-25", "LoadCellCalibration_BodyWeight.csv"))
     Force = pd.read_csv(data_file)     # Read Force Data from Excel
     BodyWeight = Force.iloc[:,0].values 
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    data_file = os.path.normpath(os.path.join(script_dir, "..", "Sensor_Calibration", "Data", "LoadCellCalibration_Loading_Unloading_2Kg.csv"))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "SensorCalibrationData", "6-22-25","LoadCellCalibration_Loading_Unloading_2Kg.csv"))
     Force = pd.read_csv(data_file)     # Read Force Data from Excel
     LoadUnload = Force.iloc[:,0].values 
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    data_file = os.path.normpath(os.path.join(script_dir, "..", "Sensor_Calibration", "Data", "LoadCellCalibration_NoLoad.csv"))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "SensorCalibrationData",  "6-23-25", "LoadCellCalibration_0Load_623.csv"))
     Force = pd.read_csv(data_file)     # Read Force Data from Excel
     NoLoad = Force.iloc[:,0].values 
 
-    return two_kg, BodyWeight, LoadUnload, NoLoad
+
+
+
+    return two_kg, BodyWeight, LoadUnload, NoLoad, PressureCal
 
 
 def GetBurnData():
   
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    data_file = os.path.normpath(os.path.join(script_dir, "..", "Data", "Force.csv"))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "BurnData", "Force.csv"))
     Force = pd.read_csv(data_file)     # Read Force Data from Excel
     F = Force.iloc[:,0].values 
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    data_file = os.path.normpath(os.path.join(script_dir, "..", "Data", "Pressure.csv"))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "BurnData", "Pressure.csv"))
     ChamberPressure = pd.read_csv(data_file) # Read Pressure Data from Excel
     Pc = ChamberPressure.iloc[:,0].values 
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    data_file = os.path.normpath(os.path.join(script_dir, "..", "Data", "RawLoadCell.csv"))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "BurnData", "RawLoadCell.csv"))
     RawLoadCell = pd.read_csv(data_file)     # Read Force Data from Excel
     RawF = RawLoadCell.iloc[:,0].values 
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    data_file = os.path.normpath(os.path.join(script_dir, "..", "Data", "RawPressureTransducer.csv"))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "BurnData", "RawPressureTransducer.csv"))
     RawPressureTransducer = pd.read_csv(data_file) # Read Pressure Data from Excel
     RawP = RawPressureTransducer.iloc[:,0].values 
 
@@ -209,3 +225,4 @@ import matplotlib.pyplot as plt
 from scipy.signal import butter, filtfilt
 import pandas as pd
 import os
+import LoadCellCalibration as LCC
