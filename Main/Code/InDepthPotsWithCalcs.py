@@ -13,8 +13,6 @@ _,_,_,t = func.DataInformation(F, 15)
 F = func.LowPassFilter(F, cutoff, order)
 Pc = func.LowPassFilter(Pc, cutoff, order)
 
-
-
 # force vs time clean
 newF = []
 newTF = []
@@ -34,7 +32,6 @@ plt.xlabel("Time (s)")
 plt.ylabel("Force (lbf)")
 plt.grid()
 plt.show()
-
 
 
 # pressure vs time clean
@@ -79,9 +76,33 @@ plt.show()
 
 
 
+#Force Vs Pressure
+F, Pc, _, _ = func.GetBurnData()
+F = func.LowPassFilter(F, cutoff, order)
+Pc = func.LowPassFilter(Pc, cutoff, order)
 
-# Force vs Pressure both , individual
+##Start of Burn
+start = int(5.5 * time_to_index)
+end = int(7.5 * time_to_index)
 
+ScompF = F[start:end]
+ScompPc = Pc[start:end]
+
+
+##End of Burn
+start = int(7.5 * time_to_index)
+end = int(10 * time_to_index)
+
+EcompF = F[start:end]
+EcompPc = Pc[start:end]
+
+plt.plot(ScompF, ScompPc, label=f"Initial Burn", color='blue')
+plt.plot(EcompF, EcompPc, label=f"Burn Down", color='red')
+plt.grid()
+plt.legend()
+plt.xlabel("Force (lbs)")
+plt.ylabel("Pressure (PSI)")
+plt.show()
 
 
 # calc burn time = 3.2s, peak thrust = 1646 N, total impulse = 4603 N-s, avg thrust = 1420 N
