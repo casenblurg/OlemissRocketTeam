@@ -27,7 +27,8 @@ The DAQ setup interfaces with both a **load cell** and a **pressure transducer**
 ---
 ## Circuitry 🔋
 
-![Thrust Stand Circuit](https://github.com/casenblurg/OlemissRocketTeam/tree/main/Main/Figures/ThrustStandCircuit.png)
+![Thrust Stand Circuit](https://raw.githubusercontent.com/casenblurg/OlemissRocketTeam/main/Main/Figures/ThrustStandCircuit.png)
+
 ---
 ## 💻 Software
 
