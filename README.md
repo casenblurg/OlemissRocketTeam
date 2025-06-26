@@ -53,3 +53,5 @@ The data analyzed in this repository comes from the **first hot fire test** ever
 
 This project serves as a hands-on opportunity for me to strengthen my skills across **mechanical**, **electrical**, and **computer engineering**, as well as to sharpen my overall **data analysis abilities**, particularly in the context of **aerospace and rocketry**.
 
+Seea: /Documents/SolidRocketMotor(DAQ).pdf for more info.
+
