@@ -25,7 +25,10 @@ The DAQ setup interfaces with both a **load cell** and a **pressure transducer**
 | **General wiring, connectors, and test stand** | Structural and electrical integration components |
 
 ---
+## Circuitry 🔋
 
+![Thrust Stand Circuit](https://github.com/casenblurg/OlemissRocketTeam/tree/main/Main/Figures/ThrustStandCircuit.png)
+---
 ## 💻 Software
 
 - **NI LabVIEW**  
