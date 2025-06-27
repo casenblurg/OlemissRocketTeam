@@ -217,7 +217,11 @@ def DataInformation(Data, total_t):
     t = np.arange(0,total_t, dt)
     print("-----------------------------")
 
-    return num_samples, sampling_freq, dt, t
+
+    
+    info = {"t":t, "num_samples":num_samples, "sampling_freq":sampling_freq, "dt":dt}
+    return info 
+
 
 
 import numpy as np 
