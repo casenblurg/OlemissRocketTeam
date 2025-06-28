@@ -8,9 +8,9 @@
 
 
 - Hardware 
-	- Omega
-		- Omega Pressure Transducer (PX309)
-		- Omega Load Cell (LC113B)
+	- Omega [x]
+		- Omega Pressure Transducer (PX309) [x]
+		- Omega Load Cell (LC113B) [x]
 	- National Instruments
 		- DAQ (NI 9174)
 		- Analog Input Module (NI 9201)
