@@ -12,9 +12,9 @@
 		- Omega Load Cell (LC113B) [x]
 		- Omega Pressure Transducer (PX309) [x]
 	- National Instruments
-		- DAQ (NI 9174)
-		- Analog Input Module (NI 9201)
-		- Electromechanical Relay (NI)
+		- DAQ (NI 9174) [x]
+		- Analog Input Module (NI 9201) [x]
+		- Electromechanical Relay (NI 9482)
 	- Aerotech
 		- Combustion Chamber
 		- Reload Kit / Propellant
@@ -87,7 +87,7 @@ The pressure transducer **converts an applied pressure into an output voltage** 
 **How do we know what voltage corresponds to what force?:**
 
 
-Every sensor has what is called a **[data sheet](https://assets.dwyeromega.com/spec/LC103B_spec.pdf)**, this is a **technical document provided by the manufacturer** that describes everything you need to know about a sensor — how it works, how to wire it, its limits, and how to interpret its output. Additionally, every sensor has an output sensitivity. **Output sensitivity** tells you **how much signal** a sensor gives **per unit of excitation voltage**, typically measured in **millivolts per volt (mV/V)**. This will be further explained in the **sensor calibration** section.
+Every sensor has what is called a **[data sheet](https://assets.dwyeromega.com/spec/LC103B_spec.pdf)**, this is a **technical document provided by the manufacturer** that describes everything you need to know about a sensor — how it works, how to wire it, its limits, and how to interpret its output. Additionally, every sensor has an output sensitivity. **Output sensitivity** tells you **how much signal** a sensor gives **per supplied voltage**, usually in **millivolts per volt (mV/V)**. This will be further explained in the **sensor calibration** section.
 
 ---
 
@@ -100,11 +100,23 @@ There are three **National Instruments** hardware components on the test stand:
 
 ---
 
-## NI cDAQ-9174
+## NI cDAQ-9174:
 
 <img src="https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/cDaq.png?raw=true" width="400">
 
-The NI cDAQ-9174 stands for **National Instruments Compact DAQ**. It is a device that lets you plug in different sensor modules to read things like temperature, pressure, or force. It connects to your computer with a USB cable and helps you collect data, control devices, and time events for experiments or testing.
+The NI cDAQ-9174 stands for **National Instruments Compact DAQ**. You can plug this into your computer using **USB** and run your Labview code. You can do all sorts of things depending on what module / card you have. In this case we have an analog input card and a relay card inserted into the cDAQ. 
 
-## Analog Input Module (NI 9201)
-## Electromechanical Relay (NI 9482)
+## Analog Input Module (NI 9201):
+<img src="https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/NI9201.png?raw=true" width="400">
+
+This is a module that you plug in to the cDAQ, I like to think of it as a fancy multi meter. There are two main terminals to pay attention to, **COM** and **AI (analog in)**. If you were using this card as a multimeter, **COM** would go to your reference (**GND**) and **AI** would go to the voltage source you aretrying to read.
+
+## Electromechanical Relay (NI 9482):
+
+<img src="https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/ERELAY.png?raw=true" width="400">
+
+This is another module that goes into the cDAQ. It is essentially a switch that can be programmed to turn on or off using Labview. This switch is used to ignite the rocket motor during test burns.
+
+--- 
+
+# Aerotech 
