@@ -46,17 +46,17 @@ def GetCalibrationData():
 def GetBurnData():
   
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    data_file = os.path.normpath(os.path.join(script_dir, "..", "BurnData", "Force.csv"))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "BurnData","Test Burn 1 | 4-16-25", "Force.csv"))
     Force = pd.read_csv(data_file)     # Read Force Data from Excel
     F = Force.iloc[:,0].values 
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    data_file = os.path.normpath(os.path.join(script_dir, "..", "BurnData", "Pressure.csv"))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "BurnData","Test Burn 1 | 4-16-25", "Pressure.csv"))
     ChamberPressure = pd.read_csv(data_file) # Read Pressure Data from Excel
     Pc = ChamberPressure.iloc[:,0].values 
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    data_file = os.path.normpath(os.path.join(script_dir, "..", "BurnData", "RawLoadCell.csv"))
+    data_file = os.path.normpath(os.path.join(script_dir, "..", "BurnData", "Test Burn 1 | 4-16-25", "RawLoadCell.csv"))
     RawLoadCell = pd.read_csv(data_file)     # Read Force Data from Excel
     RawF = RawLoadCell.iloc[:,0].values 
 
@@ -175,6 +175,8 @@ def LowPassFilter(Data, cutoff_frequency, order):
               # 1–2	     Very smooth, may round off real signal
               # 4     	 Good balance: removes noise, keeps signal shape
               # 6	     Very sharp cutoff — good for very noisy data, may overshoot edges
+    
+    sampling_freq = 2000
     nyquist = sampling_freq / 2 # nyquist frequncy: max freq possible in signal without aliasing 
     normalized_cutoff = cutoff_frequency / nyquist
 
