@@ -4,6 +4,7 @@ Over the course of a year and a half (**Nov 2023 – April 2025**), I designed a
 
 The DAQ setup interfaces with both a **load cell** and a **pressure transducer**, conditions their analog signals using amplification circuitry, and logs the data for post-processing and analysis.
 
+![TestBurn2](https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/SickRocketPicture.png)
 ---
 
 ## 🛠️ Hardware
