@@ -1,4 +1,4 @@
-# 🚀 SRM Test Stand – Overview - Casey Heustess
+# SRM Test Stand – Overview - Casey Heustess
 
 ![TestBurn2](https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/TestBurn2GIF.gif)
 
@@ -9,7 +9,7 @@ The DAQ setup interfaces with both a **load cell** and a **pressure transducer**
 
 ---
 
-## 🛠️ Hardware
+## Hardware
 
 | Component | Description |
 |----------|-------------|
@@ -28,12 +28,12 @@ The DAQ setup interfaces with both a **load cell** and a **pressure transducer**
 | **General wiring, connectors, and test stand** | Structural and electrical integration components |
 
 ---
-## Circuitry 🔋
+## Circuitry 
 
 ![Test Stand Circuit](https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/TestStandCircuit.png)
 
 ---
-## 💻 Software
+## Software
 
 - **NI LabVIEW**  
   Used to build the real-time data acquisition interface. It handled:
@@ -50,7 +50,7 @@ The DAQ setup interfaces with both a **load cell** and a **pressure transducer**
 
 ---
 
-## 📘 Additional Information
+## Additional Information
 
 The data analyzed in this repository comes from the **first hot fire test** ever recorded using this system and is used here for demonstration purposes. The goal of this repository is to showcase what can be done with acquired SRM test data. There are always better methods to explore, and continuous improvement is part of the process.
 
