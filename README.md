@@ -30,7 +30,7 @@ The DAQ setup interfaces with both a **load cell** and a **pressure transducer**
 ---
 ## Circuitry 🔋
 
-![Thrust Stand Circuit](https://raw.githubusercontent.com/casenblurg/OlemissRocketTeam/main/Main/Figures/ThrustStandCircuit.png)
+![Test Stand Circuit](https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/TestStandCircuit.png)
 
 ---
 ## 💻 Software
@@ -42,7 +42,7 @@ The DAQ setup interfaces with both a **load cell** and a **pressure transducer**
   - Timing control and logging of thrust and pressure data
 
 - **Microsoft Excel**  
-  LabVIEW export the data into Excel spreadsheets. Each test generates:
+  LabVIEW exports the data into Excel spreadsheets. Each test generates:
   - Raw load cell voltage
   - Raw pressure transducer voltage
   - Converted thrust (lbf)
