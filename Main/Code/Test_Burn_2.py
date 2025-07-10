@@ -6,7 +6,7 @@ import os
 import LoadCellCalibration as Lcal
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-data_file = os.path.normpath(os.path.join(script_dir, "..", "BurnData","Test Burn 2 | 7-9-25", "RawLoadCell.csv"))
+data_file = os.path.normpath(os.path.join(script_dir, "..", "BurnData","Test Burn 2", "RawLoadCell_Test2.csv"))
 F_voltage = pd.read_csv(data_file)     # Read Force Data from Excel
 F_voltage = F_voltage.iloc[:,0].values 
 
@@ -20,7 +20,7 @@ Force = func.LowPassFilter(Force, cutoff, order)
 
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-data_file = os.path.normpath(os.path.join(script_dir, "..", "BurnData","Test Burn 2 | 7-9-25", "Pressure.csv"))
+data_file = os.path.normpath(os.path.join(script_dir, "..", "BurnData","Test Burn 2", "Pressure_Test2.csv"))
 Pressure = pd.read_csv(data_file)     # Read Force Data from Excel
 Pressure = Pressure.iloc[:,0].values 
 
@@ -37,4 +37,3 @@ plt.grid()
 plt.show()
 
 
-print(np.max(Force))
