@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-
 def LoadCellCalibration():
 
     two_kgV, _, _, NoLoadV, _ = func.GetCalibrationData()  # Voltage
@@ -48,7 +47,7 @@ def LoadCellCalibration():
     m = 0.225 * (known_force - baseline_force) / (known_V - baseline_V)   #    force (lbs) / volt      
     b = -m * avg_NoLoadV     # bias 
 
-    print (f"The Loadcell output is lbf = {m:.7g} lbs/V + {b:.4g} lbs")
+    #print (f"The Loadcell output is lbf = {m:.7g} lbs/V + {b:.4g} lbs")
 
     return m, b
 
