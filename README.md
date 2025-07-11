@@ -1,9 +1,24 @@
 # SRM Test Stand – Overview - Casey Heustess
+## Quick Results
+<p align="center">
+  <img src="https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/TestBurn2GIF.gif?raw=true" width="900"/><br/>
+  <a href="https://youtu.be/v420piRjhMA" target="_blank">Watch the Burn Video on YouTube</a>
+</p>
 
 <p align="center">
-  <img src="https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/TestBurn2GIF.gif?raw=true" width="900"/>
   <img src="https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/AerotechVsExperimentalThrust.png?raw=true" width="900"/>
 </p>
+
+<p align="center">
+  <a href="https://www.thrustcurve.org/motors/AeroTech/L1420R/" target="_blank">Aerotech Thrust Data Source</a> &nbsp;|&nbsp;
+  <a href="https://github.com/casenblurg/OlemissRocketTeam/blob/main/Main/BurnData/Test%20Burn%202/RawLoadCell_Test2.csv" target="_blank">View Raw Load Cell Data on GitHub</a>
+</p>
+
+
+
+
+
+
 Over the course of a year and a half (**Nov 2023 – April 2025**), I designed and built a data acquisition (DAQ) system for a **solid rocket motor (SRM) test stand**. This system was developed to accurately record **thrust** and **chamber pressure** data during static fire tests of **AeroTech reloadable SRMs**.
 
 The DAQ setup interfaces with both a **load cell** and a **pressure transducer**, conditions their analog signals using amplification circuitry, and logs the data for post-processing and analysis.
