@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://www.thrustcurve.org/motors/AeroTech/L1420R/" target="_blank">Aerotech Thrust Data Source</a> &nbsp;|&nbsp;
-  <a href="https://github.com/casenblurg/OlemissRocketTeam/blob/main/Main/BurnData/Test%20Burn%202/RawLoadCell_Test2.csv" target="_blank">Raw Load Cell Data</a>
+  <a href="https://github.com/casenblurg/OlemissRocketTeam/blob/main/Main/BurnData/Test%20Burn%202/Force_Test2.csv" target="_blank">Raw Force Data</a>
 </p>
 
 
@@ -19,9 +19,9 @@
 
 
 
-Over the course of a year and a half (**Nov 2023 – April 2025**), I designed and built a data acquisition (DAQ) system for a **solid rocket motor (SRM) test stand**. This system was developed to accurately record **thrust** and **chamber pressure** data during static fire tests of **AeroTech reloadable SRMs**.
+Over the course of a year and a half (**Nov 2023 – July 2025**), I designed and built a data acquisition (DAQ) system for a **solid rocket motor (SRM) test stand**. This system was developed to accurately record **thrust** and **chamber pressure** data during static fire tests of **AeroTech reloadable SRMs**.
 
-The DAQ setup interfaces with both a **load cell** and a **pressure transducer**, conditions their analog signals using amplification circuitry, and logs the data for post-processing and analysis.
+The DAQ setup interfaces with both an **omega load cell** and a **omega pressure transducer**, conditions their analog signals using supporting circuitry, and saves the data for post-processing and analysis.
 
 
 ---
