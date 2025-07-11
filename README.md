@@ -2,7 +2,7 @@
 ## Quick Results
 <p align="center">
   <img src="https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/TestBurn2GIF.gif?raw=true" width="900"/><br/>
-  <a href="https://youtu.be/v420piRjhMA" target="_blank">Watch the Burn Video on YouTube</a>
+  <a href="https://youtu.be/v420piRjhMA" target="_blank">Youtube: Static Test Burn </a>
 </p>
 
 <p align="center">
@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://www.thrustcurve.org/motors/AeroTech/L1420R/" target="_blank">Aerotech Thrust Data Source</a> &nbsp;|&nbsp;
-  <a href="https://github.com/casenblurg/OlemissRocketTeam/blob/main/Main/BurnData/Test%20Burn%202/RawLoadCell_Test2.csv" target="_blank">View Raw Load Cell Data on GitHub</a>
+  <a href="https://github.com/casenblurg/OlemissRocketTeam/blob/main/Main/BurnData/Test%20Burn%202/RawLoadCell_Test2.csv" target="_blank">Raw Load Cell Data</a>
 </p>
 
 
