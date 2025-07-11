@@ -1,8 +1,8 @@
 # SRM Test Stand – Overview - Casey Heustess
 
 <p align="center">
-  <img src="https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/TestBurn2GIF.gif?raw=true" width="700"/>
-  <img src="https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/AerotechVsExperimentalThrust.png?raw=true" width="700"/>
+  <img src="https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/TestBurn2GIF.gif?raw=true" width="900"/>
+  <img src="https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/AerotechVsExperimentalThrust.png?raw=true" width="900"/>
 </p>
 Over the course of a year and a half (**Nov 2023 – April 2025**), I designed and built a data acquisition (DAQ) system for a **solid rocket motor (SRM) test stand**. This system was developed to accurately record **thrust** and **chamber pressure** data during static fire tests of **AeroTech reloadable SRMs**.
 
