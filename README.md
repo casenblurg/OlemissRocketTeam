@@ -45,9 +45,12 @@ The DAQ setup interfaces with both an **omega load cell** and a **omega pressure
 | **General wiring, connectors, and test stand** | Structural and electrical integration components |
 
 ---
-## Circuitry 
+## Daq Circuit Diagram
 
 ![Test Stand Circuit](https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/TestStandCircuit.png)
+
+## Daq Circuit Picture
+![DAQ](https://github.com/casenblurg/OlemissRocketTeam/blob/main/Documents/Daq_Setup.jpg}
 
 ---
 ## Software
