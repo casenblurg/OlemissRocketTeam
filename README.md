@@ -1,4 +1,4 @@
-# SRM Test Stand – Overview - Casey Heustess
+# SRM Test Stand – Casey Heustess
 ## Quick Results
 <p align="center">
   <img src="https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/TestBurn2GIF.gif?raw=true" width="900"/><br/>
