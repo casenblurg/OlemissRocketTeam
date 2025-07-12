@@ -49,8 +49,9 @@ The DAQ setup interfaces with both an **omega load cell** and a **omega pressure
 
 ![Test Stand Circuit](https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/TestStandCircuit.png)
 
-## Daq Circuit Picture
-![DAQ](https://github.com/casenblurg/OlemissRocketTeam/blob/main/Documents/Daq_Setup.jpg}
+## Daq Circuit Image
+![DAQ](https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/Daq_circuit_descirption.png)
+
 
 ---
 ## Software
