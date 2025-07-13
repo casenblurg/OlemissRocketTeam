@@ -156,3 +156,24 @@ plt.tick_params(labelsize=14, colors=text_color)
 
 plt.tight_layout()
 plt.show()
+
+
+# total impulse calculation
+Force_in_Newtons = Force_filtered * 4.4482
+total_impulse = np.trapz(Force_in_Newtons, time)
+print(f"Total Impulse: {total_impulse:0.6g} N-s")
+
+aero_impulse = 4603 #Ns
+percent_error = abs((total_impulse - aero_impulse) / aero_impulse) * 100
+print(f"Percent error: {percent_error:0.6g}%\n")
+
+
+
+
+# Average Thrust Calc
+average_thrust = np.average(Force_in_Newtons)
+print(f"Average Thrust: {average_thrust:0.6g} N")
+
+aero_average_thrust = 1420 #Ns
+percent_error = abs((average_thrust - aero_average_thrust) / aero_average_thrust) * 100
+print(f"Percent error: {percent_error:0.6g}%")
