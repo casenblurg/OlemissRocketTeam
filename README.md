@@ -56,7 +56,17 @@ The DAQ setup interfaces with both an **omega load cell** and a **omega pressure
 ---
 ## Software
 
-- **NI LabVIEW**  
+- **NI LabVIEW**
+ 
+<p align="center">
+  <img src="https://github.com/casenblurg/OlemissRocketTeam/blob/main/UserManual/Figures/LabviewTestCode.png" width="900"/>
+</p>
+
+<p align="center">
+  <a href="https://github.com/casenblurg/OlemissRocketTeam/tree/main/Main/NI_LabviewCode">Labview Scripts </a>
+</p>
+
+
   Used to build the real-time data acquisition interface. It handled:
   - Signal acquisition
   - Relay control for ignition
